@@ -53,13 +53,24 @@ function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-
+var usuario ={
+  nombre: nombre,
+  email: email,
+  password: password,
+}
+return usuario
 }
 
 function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+  if(usuario.hasOwnProperty("email")) {
+      return true
+  }
+  else {
+    return false
+  }
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -67,7 +78,15 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+
+ if(objeto.hasOwnProperty(propiedad)) {
+      return true
+  }
+  else {
+    return false
+  }
 }
+
 
 function verificarPassword (usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
