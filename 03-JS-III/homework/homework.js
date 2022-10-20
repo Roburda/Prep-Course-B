@@ -53,7 +53,6 @@ function numeroDigitos(num){
 }
   
 
-  
   // No modificar nada debajo de esta línea
   // --------------------------------
   
